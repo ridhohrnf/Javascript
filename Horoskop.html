@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Program Horoskop</h1>
+    <button onclick="getHoroscope()">Click here!</button>
+    <p>Keberuntungan anda hari ini:</p>
+    <script>
+        function getHoroscope(){
+            const randomNumber = Date.now();
+            const x = randomNumber % 10;
+            let horoskopmu;
+            //if else
+            // if (x % 2 ){
+            //     horoskopmu = "hebat";
+            // }
+            // else if (x % 3 ){
+            //     horoskopmu = "boleh juga";
+            // }
+            // else {
+            //     horoskopmu = "Mengerikan";
+            // }
+        
+            // switch (x % 3){
+            //     case 0:
+            //         horoskopmu = "Hebat";
+            //     break
+            //     case 1:
+            //         horoskopmu = "Boleh juga";
+            //     break
+            //     case 3:
+            //         horoskopmu = "Mengerikan...";
+            //     break
+            // }
+
+            //5 pola
+            // switch (x % 7){
+            //     case 0:
+            //         horoskopmu = "Hebat";
+            //         break
+            //     case 1:
+            //         horoskopmu = "Lucky Day";
+            //         break
+            //     case 2:
+            //         horoskopmu = "Buruk";
+            //         break
+            //     case 3:
+            //         horoskopmu = "So so";
+            //         break
+            //     case 4:
+            //         horoskopmu = "Pasti sial kemana2";
+            //         break
+            //     default:
+            //         horoskopmu = "B aja";
+            //         break
+            // }
+
+            //20,60,20
+            if (x < 3){
+                horoskopmu = "Mengerikan";
+            }
+            else if (x > 3 && x < 8){
+                horoskopmu = "Hebat";
+            }
+            else {
+                horoskopmu = "Boleh juga";
+            }
+            const menurun = document.createElement("p");
+            menurun.innerHTML = horoskopmu;
+            document.body.appendChild(menurun);
+        }
+    </script>
+</body>
+</html>
